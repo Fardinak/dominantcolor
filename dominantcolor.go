@@ -7,8 +7,8 @@ import (
 	"image/color/palette"
 )
 
-// Color Code Extractor
-func extractColorCode(img image.Image) color.Color {
+// Extract returns the dominant color of a given image
+func Extract(img image.Image) color.Color {
 	// Resize the image for faster computation
 	image = resize.Resize(100, 0, image, resize.Bilinear)
 	bounds := img.Bounds()
