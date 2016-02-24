@@ -10,7 +10,7 @@ import (
 // Extract returns the dominant color of a given image
 func Extract(img image.Image) color.Color {
 	// Resize the image for faster computation
-	image = resize.Resize(100, 0, image, resize.Bilinear)
+	img = resize.Resize(100, 0, img, resize.Bilinear)
 	bounds := img.Bounds()
 
 	colorCount := make([]int, len(palette.WebSafe))
